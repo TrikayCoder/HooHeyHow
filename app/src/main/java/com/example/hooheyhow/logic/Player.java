@@ -3,7 +3,6 @@ package com.example.hooheyhow.logic;
 import java.util.ArrayList;
 
 public class Player {
-    private Player next;
     ArrayList<Integer> list = new ArrayList<>();
     public Player(ArrayList<Integer> listTemp){
         list.addAll(listTemp);
@@ -24,11 +23,5 @@ public class Player {
         list.set(index,value);
     }
 
-    public Player getNext() {
-        return next;
-    }
 
-    public void setNext(Player next) {
-        this.next = next;
-    }
 }

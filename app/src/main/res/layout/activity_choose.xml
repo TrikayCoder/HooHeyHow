@@ -129,6 +129,7 @@
         app:layout_constraintVertical_bias="0.983">
 
         <ImageButton
+            android:onClick="startGameImageButton"
             android:id="@+id/startGameImageButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
