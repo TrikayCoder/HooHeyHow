@@ -1,5 +1,6 @@
 package com.example.hooheyhow.logic;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Player {

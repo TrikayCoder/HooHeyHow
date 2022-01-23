@@ -11,16 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hooheyhow.R;
-import com.example.hooheyhow.logic.LogicInterface;
+import com.example.hooheyhow.logic.Logic;
 import com.example.hooheyhow.logic.Player;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class ChooseActivity extends AppCompatActivity implements ChooseActivityInterface {
     ImageView imageView;
     TextView playerDetailTextView;
-    LogicInterface mLogic;
+    Logic mLogic;
     ArrayList<Player> player = new ArrayList<>();
     ArrayList<Integer> playerData = new ArrayList<>();
     static int tiger = 0;
@@ -29,6 +30,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     static int shrimp = 0;
     static int crab = 0;
     static int calabash = 0;
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +40,17 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         Objects.requireNonNull(getSupportActionBar()).hide();
         //end
         setContentView(R.layout.activity_choose);
+        mLogic = new Logic();
         setupVariable();
         setupArrayList();
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void print() {
         int money = tiger + chicken + fish + shrimp + crab + calabash;
         String detailTemp = Integer.toString(money);
-        playerDetailTextView.setText(detailTemp);
+        playerDetailTextView.setText(detailTemp +"vnd");
     }
 
     @SuppressLint("SetTextI18n")
@@ -62,6 +66,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         for(int i=0;i<6;i++){
             playerData.set(i,0);
         }
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -90,13 +95,18 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
 
 
     public void nextPlayerImageButton(View view) {
-        player.add(new Player(playerData));
+        Player temp = new Player(playerData);
+        player.add(temp);
         resetActivity();
     }
 
     public void startGameImageButton(View view) {
+        int result1 = mLogic.makeRandom() - 1;
+        int result2 = mLogic.makeRandom() - 1;
+        int result3 = mLogic.makeRandom() - 1;
 
         Intent intent = new Intent(this, ResultActivity.class);
+//        intent.putExtra("Key_1", s);
         startActivity(intent);
     }
 
