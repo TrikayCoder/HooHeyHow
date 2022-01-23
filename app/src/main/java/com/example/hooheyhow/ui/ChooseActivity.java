@@ -100,13 +100,18 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         resetActivity();
     }
 
+
+
     public void startGameImageButton(View view) {
         int result1 = mLogic.makeRandom() - 1;
         int result2 = mLogic.makeRandom() - 1;
         int result3 = mLogic.makeRandom() - 1;
-
+        String finalResult = mLogic.logicResult(result1,result2,result3,player);
         Intent intent = new Intent(this, ResultActivity.class);
-//        intent.putExtra("Key_1", s);
+        intent.putExtra("Final_Result", finalResult);
+        intent.putExtra("Result_01", result1);
+        intent.putExtra("Result_02", result2);
+        intent.putExtra("Result_03", result3);
         startActivity(intent);
     }
 

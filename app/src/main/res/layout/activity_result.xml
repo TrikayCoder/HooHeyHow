@@ -7,21 +7,58 @@
     tools:context=".ui.ResultActivity">
 
     <LinearLayout
-        android:layout_width="334dp"
-        android:layout_height="134dp"
-        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_width="503dp"
+        android:layout_height="163dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195">
+        app:layout_constraintVertical_bias="0.169">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/resultFinalImageView01"
+            android:layout_width="161dp"
             android:layout_height="match_parent"
-            android:text="TextView"
-            tools:ignore="HardcodedText" />
+            app:srcCompat="@drawable/random_tiger" />
+
+        <ImageView
+            android:id="@+id/resultFinalImageView02"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/random_tiger" />
+
+        <ImageView
+            android:id="@+id/resultFinalImageView03"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/random_tiger" />
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="677dp"
+        android:layout_height="192dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.785">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/resultDetailPlayerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TextView" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

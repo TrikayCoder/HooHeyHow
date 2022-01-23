@@ -5,18 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hooheyhow.R;
-import com.example.hooheyhow.logic.Logic;
-import com.example.hooheyhow.logic.Player;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class ResultActivity extends AppCompatActivity implements ResultActivityInterface {
-    TextView textView;
+    TextView resultDetailPlayerTextView;
+    ImageView resultFinalImageView01, resultFinalImageView02, resultFinalImageView03;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +26,11 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
         setContentView(R.layout.activity_result);
         setupVariable();
         Intent intent = getIntent();
-        String value1 = intent.getStringExtra("Key_1");
-        textView.setText(value1);
+        String value1 = intent.getStringExtra("Final_Result");
+        int result1 = intent.getIntExtra("Result_01",0);
+        int result2 = intent.getIntExtra("Result_02",0);
+        int result3 = intent.getIntExtra("Result_03",0);
+        resultDetailPlayerTextView.setText(value1);
     }
 
     @Override
@@ -45,6 +46,9 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
     }
 
     private void setupVariable(){
-        textView = findViewById(R.id.textView);
+        resultDetailPlayerTextView = findViewById(R.id.resultDetailPlayerTextView);
+        resultFinalImageView01 = findViewById(R.id.resultFinalImageView01);
+        resultFinalImageView02 = findViewById(R.id.resultFinalImageView02);
+        resultFinalImageView03 = findViewById(R.id.resultFinalImageView03);
     }
 }
