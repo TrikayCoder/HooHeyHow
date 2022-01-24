@@ -49,11 +49,12 @@ public class Logic {
     public String logicResult(int result1, int result2, int result3, ArrayList<Player> player){
         String finalResult = "";
         for(int i=0;i<player.size();i++){
-            String playerTH = Integer.toString(i+1);
             String moneyPlayerTH = Integer.toString(returnMoney(result1,result2,result3,player.get(i)));
-            finalResult += "Nguoi choi thu: " + playerTH + "con lai so tien sau van choi la: " + moneyPlayerTH +"|";
+            finalResult += "Con lai so tien sau van choi la: " + moneyPlayerTH +"|";
         }
         return  finalResult;
     }
+
+
 
 }
