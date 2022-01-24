@@ -19,13 +19,13 @@
 
         <ImageView
             android:id="@+id/resultFinalImageView01"
-            android:layout_width="161dp"
+            android:layout_width="164dp"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/random_tiger" />
 
         <ImageView
             android:id="@+id/resultFinalImageView02"
-            android:layout_width="79dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/random_tiger" />

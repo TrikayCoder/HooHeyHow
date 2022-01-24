@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_main"
     tools:ignore="OnClick,SpeakableTextPresentCheck,UsingOnClickInXml"
     tools:context=".ui.ChooseActivity">
 
@@ -21,20 +22,22 @@
         app:layout_constraintVertical_bias="0.141">
 
         <ImageButton
-            android:onClick="chooseAnimalImageButton"
             android:id="@+id/randomTigerImageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="217dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
+            android:onClick="chooseAnimalImageButton"
             app:srcCompat="@drawable/random_tiger"
-            />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:onClick="chooseAnimalImageButton"
             android:id="@+id/randomChickenImageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="214dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
+            android:onClick="chooseAnimalImageButton"
             app:srcCompat="@drawable/random_chicken"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
@@ -44,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
             app:srcCompat="@drawable/random_calabash"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
@@ -61,20 +65,22 @@
         tools:ignore="ContentDescription">
 
         <ImageButton
-            android:onClick="chooseAnimalImageButton"
             android:id="@+id/randomCrabImageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="215dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
+            android:onClick="chooseAnimalImageButton"
             app:srcCompat="@drawable/random_crab"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <ImageButton
-            android:onClick="chooseAnimalImageButton"
             android:id="@+id/randomFishImageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="212dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
+            android:onClick="chooseAnimalImageButton"
             app:srcCompat="@drawable/random_fish"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
@@ -84,34 +90,40 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@null"
             app:srcCompat="@drawable/random_shrimp"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="251dp"
-        android:layout_height="44dp"
+        android:layout_width="262dp"
+        android:layout_height="53dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription,HardcodedText"
-        app:layout_constraintVertical_bias="0.956">
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="ContentDescription,HardcodedText">
 
         <TextView
             android:id="@+id/playerDetailTextView"
             android:layout_width="192dp"
+            android:gravity="center"
             android:layout_height="match_parent"
-            android:text="TextView"/>
+            android:background="@drawable/playerdetail_background"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="Nhấp vào ô trên để đặt tiền, xong ấn nút kế bên nha" />
 
         <ImageButton
-            android:onClick="nextPlayerImageButton"
             android:id="@+id/nextPlayerImageButton"
+            android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_media_play"
+            android:onClick="nextPlayerImageButton"
+            app:srcCompat="@drawable/nextplayer_button_background"
             tools:ignore="InefficientWeight,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
 
     </LinearLayout>
