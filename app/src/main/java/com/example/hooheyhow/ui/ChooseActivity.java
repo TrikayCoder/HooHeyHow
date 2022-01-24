@@ -55,7 +55,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void resetActivity() {
+    public void resetActivityLv1() {
         tiger = 0;
         chicken = 0;
         fish = 0;
@@ -67,6 +67,11 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
             playerData.set(i,0);
         }
 
+    }
+
+    @Override
+    public void resetActivityLv2() {
+        player.clear();
     }
 
     @SuppressLint("SetTextI18n")
@@ -97,7 +102,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     public void nextPlayerImageButton(View view) {
         Player temp = new Player(playerData);
         player.add(temp);
-        resetActivity();
+        resetActivityLv1();
     }
 
 
@@ -112,6 +117,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         intent.putExtra("Result_01", result1);
         intent.putExtra("Result_02", result2);
         intent.putExtra("Result_03", result3);
+        resetActivityLv2();
         startActivity(intent);
     }
 
