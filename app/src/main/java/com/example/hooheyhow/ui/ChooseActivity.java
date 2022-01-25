@@ -24,6 +24,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     Logic mLogic;
     ArrayList<Player> player = new ArrayList<>();
     ArrayList<Integer> playerData = new ArrayList<>();
+    static int playerTH = 1;
     static int tiger = 0;
     static int chicken = 0;
     static int fish = 0;
@@ -50,7 +51,8 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     public void print() {
         int money = tiger + chicken + fish + shrimp + crab + calabash;
         String detailTemp = Integer.toString(money);
-        playerDetailTextView.setText(detailTemp +"vnd");
+        String sPlayerTH = Integer.toString(playerTH);
+        playerDetailTextView.setText("Player " + sPlayerTH + ": " + detailTemp +"vnd");
     }
 
     @SuppressLint("SetTextI18n")
@@ -62,7 +64,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         shrimp = 0;
         crab = 0;
         calabash = 0;
-        playerDetailTextView.setText("0 vnd");
+        playerDetailTextView.setText("Mời bạn đặt tiền ở bên trên");
         for(int i=0;i<6;i++){
             playerData.set(i,0);
         }
@@ -71,6 +73,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
 
     @Override
     public void resetActivityLv2() {
+        playerTH = 1;
         player.clear();
     }
 
@@ -78,28 +81,29 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     public void chooseAnimalImageButton(View view) {
         if(view.getId() == R.id.randomTigerImageButton){
             tiger += 5000;
-            playerData.add(0,tiger);
+            playerData.set(0,tiger);
         }else if(view.getId() == R.id.randomChickenImageButton) {
             chicken += 5000;
-            playerData.add(1, chicken);
+            playerData.set(1, chicken);
         }else if(view.getId() == R.id.randomCalabashImageButton) {
             calabash += 5000;
-            playerData.add(2, calabash);
+            playerData.set(2, calabash);
         }else if(view.getId() == R.id.randomCrabImageButton) {
             crab += 5000;
-            playerData.add(3, crab);
+            playerData.set(3, crab);
         }else if(view.getId() == R.id.randomFishImageButton) {
             fish += 5000;
-            playerData.add(4, fish);
+            playerData.set(4, fish);
         }else if(view.getId() == R.id.randomShrimpImageButton) {
             shrimp += 5000;
-            playerData.add(5, shrimp);
+            playerData.set(5, shrimp);
         }
         print();
     }
 
 
     public void nextPlayerImageButton(View view) {
+        playerTH++;
         Player temp = new Player(playerData);
         player.add(temp);
         resetActivityLv1();
