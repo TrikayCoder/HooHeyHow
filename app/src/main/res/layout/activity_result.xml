@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_main"
     tools:context=".ui.ResultActivity">
 
     <LinearLayout
@@ -42,6 +43,7 @@
         android:layout_width="677dp"
         android:layout_height="192dp"
         android:fillViewport="true"
+        android:background="@drawable/playerdetail_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,15 +59,17 @@
                 android:id="@+id/resultDetailPlayerTextView"
                 android:layout_width="match_parent"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:textSize="25dp"
                 android:layout_height="match_parent"
-                android:text="TextView" />
+                android:text="TextView"
+                tools:ignore="HardcodedText,SpUsage" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,10 +80,11 @@
 
         <ImageButton
             android:id="@+id/gotoChooseActivityImageButton"
-            android:onClick="gotoChooseActivityImageButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/btn_dialog"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:onClick="gotoChooseActivityImageButton"
+            app:srcCompat="@drawable/back_main_imagebutton"
             tools:ignore="OnClick" />
     </LinearLayout>
 

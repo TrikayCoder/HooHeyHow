@@ -130,23 +130,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="66dp"
-        android:layout_height="54dp"
+        android:layout_width="76dp"
+        android:layout_height="58dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.989"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription"
-        app:layout_constraintVertical_bias="0.983">
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="ContentDescription">
 
         <ImageButton
-            android:onClick="startGameImageButton"
             android:id="@+id/startGameImageButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@android:drawable/presence_online"
+            android:background="@null"
+            android:onClick="startGameImageButton"
+            app:srcCompat="@drawable/startgame_imagebutton_background"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     </LinearLayout>
 
