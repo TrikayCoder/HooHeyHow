@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ import java.util.Objects;
 
 public class ChooseActivity extends AppCompatActivity implements ChooseActivityInterface {
     ImageView imageView;
+    Animation mAnimationScale;
     TextView playerDetailTextView;
     Logic mLogic;
     ArrayList<Player> player = new ArrayList<>();
@@ -42,6 +45,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         //end
         setContentView(R.layout.activity_choose);
         mLogic = new Logic();
+        mAnimationScale = AnimationUtils.loadAnimation(this,R.anim.scale);
         setupVariable();
         setupArrayList();
     }
@@ -81,21 +85,27 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
     public void chooseAnimalImageButton(View view) {
         if(view.getId() == R.id.randomTigerImageButton){
             tiger += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(0,tiger);
         }else if(view.getId() == R.id.randomChickenImageButton) {
             chicken += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(1, chicken);
         }else if(view.getId() == R.id.randomCalabashImageButton) {
             calabash += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(2, calabash);
         }else if(view.getId() == R.id.randomCrabImageButton) {
             crab += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(3, crab);
         }else if(view.getId() == R.id.randomFishImageButton) {
             fish += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(4, fish);
         }else if(view.getId() == R.id.randomShrimpImageButton) {
             shrimp += 5000;
+            view.startAnimation(mAnimationScale);
             playerData.set(5, shrimp);
         }
         print();
@@ -106,6 +116,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         playerTH++;
         Player temp = new Player(playerData);
         player.add(temp);
+        view.startAnimation(mAnimationScale);
         resetActivityLv1();
     }
 
@@ -121,6 +132,7 @@ public class ChooseActivity extends AppCompatActivity implements ChooseActivityI
         intent.putExtra("Result_01", result1);
         intent.putExtra("Result_02", result2);
         intent.putExtra("Result_03", result3);
+        view.startAnimation(mAnimationScale);
         resetActivityLv2();
         startActivity(intent);
     }

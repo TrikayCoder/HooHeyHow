@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -40,6 +41,8 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
         setResultFinalImageScreen(result3, resultFinalImageView03);
         logicPrint(value1);
     }
+
+
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public void setResultFinalImageScreen(int result, ImageView view){
