@@ -109,13 +109,13 @@
 
         <TextView
             android:id="@+id/playerDetailTextView"
-            android:textColor="@color/black"
             android:layout_width="192dp"
-            android:gravity="center"
             android:layout_height="match_parent"
             android:background="@drawable/playerdetail_background"
             android:fontFamily="sans-serif-condensed-light"
-            android:text="Nhấp vào ô trên để đặt tiền, xong ấn nút kế bên nha" />
+            android:gravity="center"
+            android:text="Nhấp vào ô trên để đặt tiền, xong ấn nút kế bên"
+            android:textColor="@color/black" />
 
         <ImageButton
             android:id="@+id/nextPlayerImageButton"
