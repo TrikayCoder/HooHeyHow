@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
+    tools:context=".ui.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="166dp"
+        android:layout_height="251dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/playGameImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:onClick="playGameImageButton"
+            app:srcCompat="@drawable/playgame_button_background"
+            tools:ignore="OnClick" />
+
+        <ImageButton
+            android:id="@+id/howToPlayGameImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:onClick="howToPlayGameImageButton"
+            app:srcCompat="@drawable/howtoplay_button_background"
+            tools:ignore="OnClick" />
+
+        <ImageButton
+            android:id="@+id/visitTrikayBlogImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:background="@null"
+            android:onClick="visitTrikayBlogImageButton"
+            app:srcCompat="@drawable/trikayblog_button_background"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ public class OpeningActivity extends AppCompatActivity {
         //TODO  RUN TIME OPENING SCREEN
         new Handler().postDelayed(new Runnable() {
             @Override public void run() {
-                Intent i = new Intent(OpeningActivity.this, ChooseActivity.class);
+                Intent i = new Intent(OpeningActivity.this, MenuActivity.class);
                 startActivity(i);
                 finish(); } }, 3000);
     }

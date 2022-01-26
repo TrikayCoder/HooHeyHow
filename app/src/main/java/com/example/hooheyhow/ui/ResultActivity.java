@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +22,7 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
     TextView resultDetailPlayerTextView;
     ImageView resultFinalImageView01, resultFinalImageView02, resultFinalImageView03;
     Logic mLogic;
+    Animation mAnimationScale;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,7 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
         int result2 = intent.getIntExtra("Result_02",0);
         int result3 = intent.getIntExtra("Result_03",0);
         mLogic = new Logic();
+        mAnimationScale = AnimationUtils.loadAnimation(this,R.anim.scale);
         resetText();
         setResultFinalImageScreen(result1, resultFinalImageView01);
         setResultFinalImageScreen(result2, resultFinalImageView02);
@@ -101,7 +105,14 @@ public class ResultActivity extends AppCompatActivity implements ResultActivityI
     }
 
     public void gotoChooseActivityImageButton(View view) {
+        view.startAnimation(mAnimationScale);
         Intent intent = new Intent(this, ChooseActivity.class);
+        startActivity(intent);
+    }
+
+    public void gotoMenuActivityImageButton(View view) {
+        view.startAnimation(mAnimationScale);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 }

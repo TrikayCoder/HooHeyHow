@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HooHeyHow">
         <activity
+            android:name=".ui.MenuActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
             android:name=".ui.OpeningActivity"
             android:exported="true"
             android:screenOrientation="landscape">
@@ -18,7 +22,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ui.ChooseActivity"

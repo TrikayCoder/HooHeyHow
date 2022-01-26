@@ -50,7 +50,7 @@ public class Logic {
         String finalResult = "";
         for(int i=0;i<player.size();i++){
             String moneyPlayerTH = Integer.toString(returnMoney(result1,result2,result3,player.get(i)));
-            finalResult += "Con lai so tien sau van choi la: " + moneyPlayerTH +"|";
+            finalResult += "Còn Lại Số Tiền Sau Ván Chơi Là: " + moneyPlayerTH +"|";
         }
         return  finalResult;
     }
