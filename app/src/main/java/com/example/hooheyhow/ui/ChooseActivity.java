@@ -1,8 +1,7 @@
 package com.example.hooheyhow.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +11,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.hooheyhow.R;
 import com.example.hooheyhow.logic.Logic;
 import com.example.hooheyhow.logic.Player;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
