@@ -35,7 +35,7 @@ public class MenuActivity extends AppCompatActivity {
 
     public void howToPlayGameImageButton(View view) {
         view.startAnimation(mAnimationScale);
-        Uri uri = Uri.parse("https://www.youtube.com");
+        Uri uri = Uri.parse("https://www.youtube.com/watch?v=uZcpX1ty7XQ");
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
